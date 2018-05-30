@@ -1,0 +1,13 @@
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA9SZOzWWfekHKJZPESw6Rm3tV9u8KCjeM",
+    authDomain: "ionictask.firebaseapp.com",
+    databaseURL: "https://ionictask.firebaseio.com",
+    projectId: "ionictask",
+    storageBucket: "ionictask.appspot.com",
+    messagingSenderId: "664978290228"
+  };
+  firebase.initializeApp(config);
+</script>
