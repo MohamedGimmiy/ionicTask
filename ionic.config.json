@@ -1,0 +1,8 @@
+{
+  "name": "ionicTask",
+  "app_id": "9ced724e",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
