@@ -4,7 +4,8 @@ import { LoginPage} from '../login/login';
 import {ActivityOnePage} from '../activity-one/activity-one';
 import {ActivityTwoPage} from '../activity-two/activity-two';
 
-import { LocalNotifications } from '@ionic-native/local-notifications';
+
+import {AngularFireAuth} from 'angularfire2/auth';
 
 
 /**
@@ -21,32 +22,30 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    public localNotifications: LocalNotifications) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public fire:AngularFireAuth) {
   }
 
 
 
-  notify(){
-    this.localNotifications.schedule({
-      id: 1,
-      title : 'this is title',
-      text: 'Single ILocalNotification',
-      sound: null
-    });
-  }
+
+  
   logOut(){
-    this.navCtrl.push(LoginPage);
+    this.fire.auth.signOut().then(function() {
+      // Sign-out successful.
+      setInterval(alert('signed out successfully'),1000);
+    }).catch(function(error) {
+      // An error happened.
+      alert('error happened')
+    });
+    this.navCtrl.setRoot(LoginPage);
   }
 
   activityOne(){
 
-    setInterval(this.notify(),1000);
     this.navCtrl.push(ActivityOnePage);
     
   }
   activityTwo(){
-    setInterval(this.notify(),1000);
     this.navCtrl.push(ActivityTwoPage);
   }
   ionViewDidLoad() {

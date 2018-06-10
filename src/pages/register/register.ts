@@ -34,7 +34,7 @@ export class RegisterPage {
       console.log(error);
     });
     
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');

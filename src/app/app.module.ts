@@ -9,16 +9,17 @@ import { AngularFireModule } from 'angularfire2'; // firebase added
 import { AngularFireDatabaseModule  } from "angularfire2/database"; 
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
-import { LocalNotifications } from '@ionic-native/local-notifications';
+import {HomePage} from '../pages/home/home';
+import {LoginPage} from '../pages/login/login';
+import {RegisterPage} from '../pages/register/register';
+import {ActivityOnePage} from '../pages/activity-one/activity-one';
+import {ActivityTwoPage} from '../pages/activity-two/activity-two';
+
 
 
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import{LoginPage} from '../pages/login/login';
-import{RegisterPage} from '../pages/register/register';
-import{ActivityOnePage} from '../pages/activity-one/activity-one';
-import{ActivityTwoPage} from '../pages/activity-two/activity-two';
+
 
 const config = {
   apiKey: "AIzaSyA9SZOzWWfekHKJZPESw6Rm3tV9u8KCjeM",
@@ -37,6 +38,7 @@ const config = {
     RegisterPage,
     ActivityOnePage,
     ActivityTwoPage
+
   ],
   imports: [
     BrowserModule,
@@ -53,9 +55,9 @@ const config = {
     RegisterPage,
     ActivityOnePage,
     ActivityTwoPage
+
   ],
   providers: [
-    LocalNotifications,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

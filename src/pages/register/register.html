@@ -6,52 +6,23 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>register</ion-title>
+  <ion-navbar color="primary">
+    <ion-title >Go to Login</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-    <ion-list style="font-size:25px; width:50%; margin:auto;">
-        <ion-item>
-          <ion-label stacked style="font-size:21px;">Username</ion-label>
-          <ion-input type="text" [(ngModel)]="User"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label stacked style="font-size:21px;">FirstName</ion-label>
-            <ion-input type="text" [(ngModel)]="Fname"></ion-input>
-        </ion-item>
-        <ion-item>
-              <ion-label stacked style="font-size:21px;">LastName</ion-label>
-              <ion-input type="text" [(ngModel)]="Lname"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label stacked style="font-size:21px;">Password</ion-label>
-            <ion-input type="password" [(ngModel)]="password"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label stacked style="font-size:21px;">Email</ion-label>
-            <ion-input type="email" [(ngModel)]="email"></ion-input>
-        </ion-item>
-        <ion-list radio-group [(ngModel)]="gender">
-            <ion-list-header style="font-size:21px;">
-              Gender
-            </ion-list-header>
-            <ion-item>
-              <ion-label style="font-size:21px;">Male</ion-label>
-              <ion-radio  value="Male"></ion-radio>
-            </ion-item>
-            <ion-item>
-                <ion-label style="font-size:21px;">Female</ion-label>
-                <ion-radio  value="Female"></ion-radio>
-            </ion-item>
-          </ion-list>
-
+<ion-content padding class="background">
+  <h2>Sign Up</h2>
+    <ion-list>
+          <ion-input class="buttonStyle" type="text" [(ngModel)]="User" placeholder="Username"></ion-input>
+            <ion-input class="buttonStyle" type="text" [(ngModel)]="Fname" placeholder="Fname"></ion-input>
+            <ion-input class="buttonStyle" type="text" [(ngModel)]="Lname" placeholder="Lname"></ion-input>
+            <ion-input class="buttonStyle" type="password" [(ngModel)]="password" placeholder="Password"></ion-input>
+          <ion-input class="buttonStyle" type="email" [(ngModel)]="email" placeholder="Email"></ion-input>
     </ion-list>
 
-
-  <button ion-button color="primary" (click)="register(email,password)" full>SignUp</button>
+  <button class="buttonStyle2" (click)="register(email,password)" full>SignUp</button>
 
 </ion-content>
